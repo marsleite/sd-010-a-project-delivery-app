@@ -1,9 +1,21 @@
 const User = (sequelize, DataTypes) => {
   const User = sequelize.define("User", {
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    role: DataTypes.STRING,
+    name: {
+      type: DataTypes.STRING,
+      notNull: true,
+    },
+    email: {
+      type: DataTypes.STRING,
+      notNull: true,
+    },
+    password: {
+      type: DataTypes.STRING,
+      notNull: true,
+    },
+    role: {
+      type: DataTypes.STRING,
+      notNull: true,
+    },
   });
 
   return User;
